@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header bg-black text-white">
+      <div class="container">
+        <div class="header__inner row">
+          <div class="nav col-6 text-start">
+            <ul class="nav__menu">
+              <li class="nav__menu-item">
+                <a class="nav__menu-item--link" href="#projects">Проекты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-control col-6 text-end">
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox" name="color-scheme" value="light" aria-label="Светлая"
+                onchange="handleChange(this.checked)" />
+              <span class="checkbox-style"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
