@@ -1,0 +1,17 @@
+:root{
+  --primary: #171718;
+  --special: #5c62ec;
+  --white: #fff;
+  --gray: #26292d;
+  
+  --height-header: 65px;
+  
+  --white-gray: var(--white);
+  --white-primary: var(--white);
+  --primary-white: var(--primary);
+  .switch{
+    --white-gray: var(--gray);
+    --white-primary: var(--primary);
+    --primary-white: var(--white);
+  }
+}

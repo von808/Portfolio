@@ -67,8 +67,9 @@ function images() {
 
 function scripts() {
   return src([
-    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    // 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/wowjs/dist/wow.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -111,6 +112,7 @@ function cleanDist() {
 function building() {
   return src([
     'app/css/style.min.css',
+    'app/libs/**/*',
     'app/images/*.*',
     // '!app/images/*.svg',
     // 'app/images/sprite.svg',

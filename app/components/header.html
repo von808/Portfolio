@@ -11,23 +11,30 @@
 
 <body>
   <div class="wrapper">
-    <header class="header bg-black text-white">
+    <header class="header">
       <div class="container">
-        <div class="header__inner row">
-          <div class="nav col-6 text-start">
-            <ul class="nav__menu">
-              <li class="nav__menu-item">
-                <a class="nav__menu-item--link" href="#projects">Проекты</a>
+        <div class="header__inner">
+          <a class="logo" href="/">
+            <img class="logo-img" src="images/logo.svg" alt="logo">
+          </a>
+
+          <button class="dark-mode-btn">
+            <img class="light-mode" src="images/sun.svg" alt="light-mode">
+            <span class="dark-mode-circle"></span>
+            <img class="dark-mode" src="images/moon.svg" alt="dark-mode">
+          </button>
+
+          <ul class="nav__list">
+            <li class="nav__list-item nav__list-item--projects">
+              <a class="nav__list-item--link" href="/projects.html">project</a>
+            </li>
+            <li class="nav__list-item nav__list-item--skills">
+              <a class="nav__list-item--link" href="/skills.html">skills</a>
               </li>
-            </ul>
-          </div>
-          <div class="site-control col-6 text-end">
-            <label class="checkbox">
-              <input class="checkbox__input" type="checkbox" name="color-scheme" value="light" aria-label="Светлая"
-                onchange="handleChange(this.checked)" />
-              <span class="checkbox-style"></span>
-            </label>
-          </div>
+            <li class="nav__list-item nav__list-item--contacts">
+              <a class="nav__list-item--link" href="/contacts.html">contacts</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

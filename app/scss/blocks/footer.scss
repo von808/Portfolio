@@ -1,0 +1,38 @@
+.footer {
+  background-color: var(--primary, #000);
+  color: var(--white, #fff);
+
+  &__inner {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 27px;
+
+  &__item:hover {
+    .socials__item-img {
+      filter: contrast(50%);
+    }
+  }
+
+  &__item-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    transition: all .1s linear;
+  }
+}

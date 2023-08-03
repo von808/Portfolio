@@ -1,0 +1,23 @@
+.page-contacts{
+  .contacts{
+    color: var(--primary-white);
+  
+    &__inner {
+      padding: 70px 0;
+      text-align: center;
+    }
+    
+    &__title {
+      margin-bottom: 40px;
+    }
+  
+    &__content {
+      max-width: 570px;
+      margin: 0 auto;
+    }
+  
+    &__content-item {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+.page-main {
+  .hero {
+    background-color: var(--primary);
+    color: var(--white, #fff);
+    position: relative;
+
+    &__inner {
+      height: calc(100vh - var(--height-header));
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-decoration {
+      scale: 1.2;
+      display: block;
+      position: absolute;
+      margin: auto;
+      animation: hero-decoration 20s linear infinite reverse;
+    }
+
+    @keyframes hero-decoration {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    &__content {
+      text-align: center;
+      animation: heartBit 4s ease-in-out infinite;
+      z-index: 5;
+    }
+
+    @keyframes heartBit {
+      0% {
+        transform: scale(1);
+      }
+
+      20% {
+        transform: scale(.98);
+      }
+
+      40% {
+        transform: scale(1.03);
+      }
+
+      60% {
+        transform: scale(.96);
+      }
+
+      80% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    &__title-1 {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      margin-bottom: 40px;
+    }
+
+    .decoration-1 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      animation: asd 5s linear infinite;
+      path{
+        stroke: var(--special);
+      }
+    }
+
+    @keyframes asd {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .decoration-2 {
+      width: 100px;
+      height: 100px;
+      background: url(../../images/logo-html.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      bottom: 15%;
+      left: 10%;
+    }
+  }
+
+  .projects {
+    &__inner {
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    &__title {
+      width: fit-content;
+      margin: 0 auto 60px;
+      display: block;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    &__item {
+      display: block;
+      max-width: 370px;
+      min-height: 350px;
+      border-radius: 10px;
+      background-color: var(--white-primary);
+      box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.25);
+      transition: all 0.5s linear;
+    }
+
+    &__item:hover {
+      scale: 1;
+
+      img.projects__img-item {
+        scale: 1.1;
+      }
+    }
+
+    &__img {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    &__img-item {
+      width: 370px;
+      height: 278px;
+      object-fit: cover;
+      transition: all 0.5s linear;
+    }
+
+    &__item-title {
+      color: var(--primary-white);
+      padding: 15px 20px 25px
+    }
+  }
+
+  .projects__item {
+    transition: all .45s cubic-bezier(.68, -.55, .27, 1.55) .45s;
+  }
+
+  .projects__items:hover .projects__item {
+    transform: translateY(5%)
+  }
+
+  @media (min-width:1199px) {
+    .projects__items:hover .projects__item:nth-child(3n+2) {
+      transform: translateY(-5%)
+    }
+  }
+}

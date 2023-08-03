@@ -1,0 +1,20 @@
+@media (max-width: 1199px){
+  .projects__items:hover .projects__item {
+    transform: translateY(5%);
+  }
+
+  .projects__items:hover .projects__item:nth-child(even) {
+    transform: translateY(-5%);
+  }
+}
+@media (max-width: 799px){
+  .projects__items:hover .projects__item {
+    transform: translateY(0%);
+    transform: translateX(5%);
+  }
+
+  .projects__items:hover .projects__item:nth-child(even) {
+    transform: translateY(0%);
+    transform: translateX(-5%);
+  }
+}

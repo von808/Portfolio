@@ -4,16 +4,13 @@
 @import 'reset';
 @import 'global';
 
-.header{
-  &__inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100px;
-  }
-}
 
-
+@import 'blocks/header.scss';
+@import 'blocks/footer.scss';
+@import 'blocks/index.scss';
+@import 'blocks/projects.scss';
+@import 'blocks/skills.scss';
+@import 'blocks/contacts.scss';
 
 
 @import 'media';
