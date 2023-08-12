@@ -11,19 +11,26 @@
 
 <body>
   <div class="wrapper">
-    <header class="header bg-black text-white">
+    <header class="header">
       <div class="container">
-        <div class="header__inner row">
-          <div class="nav col-6 text-start">
-            <ul class="nav__menu">
-              <li class="nav__menu-item">
-                <a class="nav__menu-item--link" href="#projects">Проекты</a>
-              </li>
+        <div class="header__inner">
+          <div class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__item-link" href="#">Главная</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="#">Проекты</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="#">О нас</a></li>
+              <li class="nav__item"><a class="nav__item-link" href="#">Контакты</a></li>
             </ul>
           </div>
-          <div class="site-control col-6 text-end">
+
+          <div class="controls">
             <label class="checkbox">
               <input class="checkbox__input" type="checkbox" name="color-scheme" value="light" aria-label="Светлая"
+                onchange="handleChange(this.checked)" />
+              <span class="checkbox-style"></span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox" name="color-scheme" value="ru" aria-label="RU"
                 onchange="handleChange(this.checked)" />
               <span class="checkbox-style"></span>
             </label>

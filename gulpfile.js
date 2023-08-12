@@ -7,9 +7,9 @@ const browserSync  = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const clean        = require('gulp-clean');
 const del          = require('del');
-const avif         = require('gulp-avif');
-const webp         = require('gulp-webp');
-const imagemin     = require('gulp-imagemin');
+// const avif         = require('gulp-avif');
+// const webp         = require('gulp-webp');
+// const imagemin     = require('gulp-imagemin');
 const newer        = require('gulp-newer');
 const fonter       = require('gulp-fonter');
 const ttf2woff2    = require('gulp-ttf2woff2');
@@ -36,21 +36,21 @@ function fonts() {
     .pipe(dest('app/fonts'))
 }
 
-function images() {
-  return src(['app/images/src/*.*', '!app/images/src/*.svg'])
-    .pipe(newer('app/images'))
-    .pipe(avif({quality : 50}))
+// function images() {
+//   return src(['app/images/src/*.*', '!app/images/src/*.svg'])
+//     .pipe(newer('app/images'))
+//     .pipe(avif({quality : 50}))
 
-    .pipe(src('app/images/src/*.*'))
-    .pipe(newer('app/images'))
-    .pipe(webp())
+//     .pipe(src('app/images/src/*.*'))
+//     .pipe(newer('app/images'))
+//     .pipe(webp())
 
-    .pipe(src('app/images/src/*.*'))
-    .pipe(newer('app/images'))
-    .pipe(imagemin())
+//     .pipe(src('app/images/src/*.*'))
+//     .pipe(newer('app/images'))
+//     .pipe(imagemin())
 
-    .pipe(dest('app/images'))
-}
+//     .pipe(dest('app/images'))
+// }
 
 // function sprite () {
 //   return src('app/images/*.svg')
@@ -93,7 +93,7 @@ function watching() {
     }
   });
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/images/src'], images);
+  // watch(['app/images/src'], images);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/components/*', 'app/pages/*'], pages);
   watch(['app/*.html']).on('change', browserSync.reload);
@@ -123,7 +123,7 @@ function building() {
 }
 
 exports.styles = styles;
-exports.images = images;
+// exports.images = images;
 exports.fonts = fonts;
 exports.pages = pages;
 exports.building = building;
@@ -133,4 +133,4 @@ exports.watching = watching;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, building);
-exports.default = parallel(styles, images, scripts, pages, watching);
+exports.default = parallel(styles, scripts, pages, watching);
